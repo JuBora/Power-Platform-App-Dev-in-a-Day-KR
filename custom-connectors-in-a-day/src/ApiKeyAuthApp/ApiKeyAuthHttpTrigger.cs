@@ -37,6 +37,7 @@ namespace ApiKeyAuthApp
         [OpenApiResponseWithBody(statusCode: HttpStatusCode.OK, contentType: "application/json", bodyType: typeof(GreetingResponse), Description = "The OK response")]
         // ⬆️⬆️⬆️ 위의 코드 주석을 풀어주세요 ⬆️⬆️⬆️
 
+
         public async Task<IActionResult> GetGreeting(
             [HttpTrigger(AuthorizationLevel.Function, "GET", Route = "greeting")] HttpRequest req)
         {
